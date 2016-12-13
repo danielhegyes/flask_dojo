@@ -1,5 +1,4 @@
 # Student
-# Student
 
 ## Description
 This class represents a real class @ Codecool, containing mentors and students working at the class.
