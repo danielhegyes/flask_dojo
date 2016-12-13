@@ -26,7 +26,7 @@ None
 ## Instance methods
 
 ### ```__init__```
-The constructor of the object.
+The constructor of the object. The class also has a constructor, which calls the Person's constructor, but also set's the nickname attribute (should raise an error, if empty).
 
 #### Arguments
 
