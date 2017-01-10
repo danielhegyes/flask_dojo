@@ -19,7 +19,7 @@ database = get_sql.runSql("""SELECT concat(name) FROM project""")
 
 x = str(database)
 
-print(x)
+print(x.strip(","))
 
 text_content = (x)
 text_size = draw.textsize(text_content)
