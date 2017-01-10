@@ -14,12 +14,14 @@ CREATE TABLE status (
   SELECT company_name, budget_value, main_color FROM project ORDER BY budget_value
 
 
-  UPDATE project SET budget_value = (budget_in_huf * usd_to_huf) WHERE budget_currency = ('USD')
-  UPDATE project SET budget_value = (budget_in_huf * gbp_to_huf) WHERE budget_currency = ('GBP')
-  UPDATE project SET budget_value = (budget_in_huf * eur_to_huf) WHERE budget_currency = ('EUR')
+  UPDATE project SET budget_value = (budget_in_huf * usd_to_huf) WHERE budget_currency = ('USD');
+  UPDATE project SET budget_value = (budget_in_huf * gbp_to_huf) WHERE budget_currency = ('GBP');
+  UPDATE project SET budget_value = (budget_in_huf * eur_to_huf) WHERE budget_currency = ('EUR');
 
 );
 
+#COUNTPROBABLYWONTWORKBUTWHATCANYOUDO_and_onlycountsasinglecompany(ifworks):
+  SELECT COUNT(company_name) AS KazioProjects FROM project WHERE company_name = "Kazio";
 
 
 INSERT INTO status (id, name) VALUES (1, 'under order');
