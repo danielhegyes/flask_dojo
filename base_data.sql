@@ -1,28 +1,10 @@
 DROP TABLE IF EXISTS "project";
 DROP TABLE IF EXISTS "status";
 
-
-usd_to_huf = 292.25
-gbp_to_huf = 354.99
-eur_to_huf = 308.5
-
-
 CREATE TABLE status (
 	id INT PRIMARY KEY,
 	name VARCHAR(11)
-
-  SELECT company_name, budget_value, main_color FROM project ORDER BY budget_value
-
-
-  UPDATE project SET budget_value = (budget_in_huf * usd_to_huf) WHERE budget_currency = ('USD');
-  UPDATE project SET budget_value = (budget_in_huf * gbp_to_huf) WHERE budget_currency = ('GBP');
-  UPDATE project SET budget_value = (budget_in_huf * eur_to_huf) WHERE budget_currency = ('EUR');
-
 );
-
-#COUNTPROBABLYWONTWORKBUTWHATCANYOUDO_and_onlycountsasinglecompany(ifworks):
-  SELECT COUNT(company_name) AS KazioProjects FROM project WHERE company_name = "Kazio";
-
 
 INSERT INTO status (id, name) VALUES (1, 'under order');
 INSERT INTO status (id, name) VALUES (2, 'development');
@@ -41,7 +23,6 @@ CREATE TABLE project (
 	budget_currency VARCHAR(3),
 	status INT REFERENCES status (id),
 	maintenance_requested VARCHAR(50)
-	budget_in_huf INT REFERENCES(50) #CANWEDOTHISLOL?
 );
 
 INSERT INTO project VALUES (1, 'Y-find', '2004-12-05 00:29:49', 'Camimbo', 'Adirejo', '#2bb', 'Carolyn Carpenter', '3141.51', 'EUR', 2, FALSE);
