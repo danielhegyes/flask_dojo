@@ -1,13 +1,5 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
-<<<<<<< HEAD
-*/__pycache__/
-*.py[cod]
-*$py.class
-
-# OS-X
-.DS_Store
-=======
 *.py[cod]
 *$py.class
 
@@ -109,4 +101,3 @@ ENV/
 
 # Sample image
 sample-out.png
->>>>>>> 4492b528833a28ae93ec48779b9cf60394cc1122
